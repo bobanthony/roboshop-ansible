@@ -1,0 +1,3 @@
+- name: print out payment
+  ansible.builtin.debug:
+    msg: payment

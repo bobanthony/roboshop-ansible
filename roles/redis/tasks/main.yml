@@ -1,0 +1,3 @@
+- name: print out redis
+  ansible.builtin.debug:
+    msg: redis
