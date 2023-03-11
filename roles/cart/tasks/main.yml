@@ -1,0 +1,3 @@
+- name: print out cart
+  ansible.builtin.debug:
+    msg: cart
