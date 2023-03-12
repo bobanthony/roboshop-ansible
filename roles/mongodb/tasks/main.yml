@@ -18,4 +18,4 @@
   ansible.builtin.systemd:
     name: MONGOD
     state: started
-    enable: true
+    enabled: true
