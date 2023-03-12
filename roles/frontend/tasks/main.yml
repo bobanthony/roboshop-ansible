@@ -1,7 +1,7 @@
 - name: install nginx
-  ansible.builtin.dnf:
+  ansible.builtin.yum:
     name: nginx
-    status: installed
+    state: installed
 
 - name: remove old contents
   ansible.builtin.file:
