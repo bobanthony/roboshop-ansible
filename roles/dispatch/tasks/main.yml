@@ -1,3 +1,0 @@
-- name: print out dispatch
-  ansible.builtin.debug:
-    msg: dispatch
