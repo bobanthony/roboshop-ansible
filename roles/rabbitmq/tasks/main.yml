@@ -12,7 +12,7 @@
     state: installed
 
 - name: start RabbitMQ service
-  ansible.built.systemd:
+  ansible.builtin.systemd:
     name: rabbitmq-server
     state: started
     enabled: yes
