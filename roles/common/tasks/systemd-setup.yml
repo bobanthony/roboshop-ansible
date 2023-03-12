@@ -1,7 +1,7 @@
 - name: Copy SystemD Config file
   ansible.builtin.copy:
     src: "{{ component }}.service"
-    dest: /usr/systemd/system/{{componenet}}.service
+    dest: /usr/systemd/system/{{component}}.service
 
 - name: start service
   ansible.builtin.systemd:
