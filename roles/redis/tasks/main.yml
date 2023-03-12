@@ -1,3 +1,11 @@
-- name: print out redis
-  ansible.builtin.debug:
-    msg: redis
+- name: install Redis repos
+  ansible.builtin.yum:
+    name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+    state: installed
+    disable_gpg_check: yes
+
+- name: enable and install Redis
+  ansible.builtin.dnf:
+    name: "@redis:remi-6.2"
+    state: installed
+
