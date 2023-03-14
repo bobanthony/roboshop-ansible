@@ -22,7 +22,7 @@
 
 
 - name: create a roboshop configs in nginx
-  ansible.builtin.copy:
+  ansible.builtin.templates:
     src: roboshop.conf
     dest: /etc/nginx/default.d/roboshop.conf
 
