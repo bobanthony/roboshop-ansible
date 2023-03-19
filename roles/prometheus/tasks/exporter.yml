@@ -3,3 +3,14 @@
     src: "{{ exporter_url }}"
     dest: /opt
     remote_src: true
+
+- name: Copy systemD exporter
+  ansible.builtin.template:
+    src: exporter.service
+    dest: /etc/systemd/system/node_exporter.service
+
+- name: Start Exporter service
+  ansible.builtin.systemd:
+    state: restarted
+    enabled: yes
+    daemon-reload: yes
