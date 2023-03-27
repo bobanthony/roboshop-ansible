@@ -13,7 +13,9 @@ alerting:
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
-  - alerts.yml
+{% for component in components %}
+  - {{ file }}
+{% endfor %}
 
 scrape_configs:
   - job_name: 'roboshop-nodes'
