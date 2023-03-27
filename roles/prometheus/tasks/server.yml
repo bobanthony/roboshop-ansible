@@ -7,7 +7,7 @@
   ansible.builtin.template:
     src: "{{ item }}"
     dest: /opt/prometheus/{{ item }}
-  loop: {{ alerts_files }}
+  loop: "{{ alerts_files }}"
 
 
 
@@ -25,6 +25,6 @@
   ansible.builtin.systemd:
     name: alertmanager
     state: restarted
- 
+
 - name: Check alertmanager is started
   ansible.builtin.shell: netstat -lntp | grep 9093
