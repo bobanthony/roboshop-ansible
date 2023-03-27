@@ -25,3 +25,6 @@
   ansible.builtin.systemd:
     name: alertmanager
     state: restarted
+ 
+- name: Check alertmanager is started
+  ansible.builtin.shell: netstat -lntp | grep 9093
