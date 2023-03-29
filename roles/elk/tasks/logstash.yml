@@ -1,0 +1,13 @@
+- name: Copy Logstash configuration
+  ansible.builtin.template:
+    src: logstash.yml
+    dest: /etc/logstash/configs.d/logstash.configs
+
+
+- name: Start Logstash
+  ansible.builtin.systemd:
+    name: logstash
+    state: restarted
+
+- name: Check whether Logstash started or not
+  ansible.builtin.shell: sleep 60 ; netstat -lntp | grep 5044
