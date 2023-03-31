@@ -21,13 +21,13 @@ filebeat.inputs:
   # filestream is an input for collecting log messages from files.
   - type: filestream
   # Unique ID among all inputs, an ID is required.
-  id: my-filestream-id
+  #id: my-filestream-id
 
   # Change to true to enable this input configuration.
-  enabled: true
+    enabled: true
 
   # Paths that should be crawled and fetched. Glob based paths.
-  paths:
+    paths:
     - /var/log/nginx/access.log
 
     #- c:\programdata\elasticsearch\logs\*
